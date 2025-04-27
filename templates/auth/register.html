@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    login -templates
+{% endblock title %}
+
+
+{% block body %}
+
+
+    <h1>Inscription</h1>
+    <form action="">
+        <div class="inputbox">
+            <ion-icon name="mail-open-outline"></ion-icon>
+            <input type="email" required>
+            <label for="">Email</label>
+        </div>
+        <div class="inputbox">
+            <ion-icon name="key-outline"></ion-icon>
+            <input type="password">
+            <label for="">Mot de passe</label>
+        </div>
+        <div class="forgot">
+            <input type="checkbox">
+            <label for="">Mot de passe oublié?</label>
+        </div>
+        <button>Inscription</button>
+        <div class="register-option">
+            <span>Déja un compte?</span>
+            <a href=""id="switch-to-login">Connectez-vous</a>
+        </div>
+    </form>
+
+
+    {% endblock body %}
