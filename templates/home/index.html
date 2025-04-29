@@ -10,51 +10,7 @@
 
 {% block body %}
 
-<!-- Barre de navigation élégante -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <span class="logo-icon"><i class="fas fa-spa"></i></span>
-            <span class="logo-text">Éclat Beauty</span>
-            <span class="logo-sublime"></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#accueil">
-                        <span class="nav-link-inner">Accueil</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">
-                        <span class="nav-link-inner">Services</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#apropos">
-                        <span class="nav-link-inner">À propos</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">
-                        <span class="nav-link-inner">Contact</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-cta">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#connexionModal">
-                        <span class="nav-link-inner">
-                            <i class="far fa-user"></i> Espace Client
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 
 <!-- Section Hero -->
 <section id="accueil" class="hero-section py-5 mt-5" style="background-image: url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
@@ -510,71 +466,7 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 wow animate__fadeInUp">
-                <h4 class="fw-bold mb-4">
-                    <i class="fas fa-spa me-2"></i>Éclat Beauty
-                </h4>
-                <p>Votre salon de beauté premium à Paris, offrant des soins personnalisés avec des produits naturels et bio.</p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
-                </div>
-            </div>
-            
-            <div class="col-lg-2 col-md-6 wow animate__fadeInUp" data-wow-delay="0.1s">
-                <h5 class="fw-bold mb-4">Liens Rapides</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#accueil" class="text-white text-decoration-none">Accueil</a></li>
-                    <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Services</a></li>
-                    <li class="mb-2"><a href="#apropos" class="text-white text-decoration-none">À propos</a></li>
-                    <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 wow animate__fadeInUp" data-wow-delay="0.2s">
-                <h5 class="fw-bold mb-4">Services</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Soins du visage</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Massages</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Manucure/Pédicure</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Épilation</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Maquillage</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 wow animate__fadeInUp" data-wow-delay="0.3s">
-                <h5 class="fw-bold mb-4">Newsletter</h5>
-                <p>Abonnez-vous à notre newsletter pour recevoir nos offres spéciales et actualités.</p>
-                <form class="mt-3">
-                    <div class="input-group">
-                        <input type="email" class="form-control" placeholder="Votre email">
-                        <button class="btn btn-primary" type="button">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
-        <hr class="my-4">
-        
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start wow animate__fadeInUp">
-                <p class="mb-0">&copy; 2023 Éclat Beauty. Tous droits réservés.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end wow animate__fadeInUp">
-                <p class="mb-0">Conçu avec <i class="fas fa-heart text-danger"></i> par Éclat Beauty</p>
-            </div>
-        </div>
-    </div>
-</footer>
+
 
 <!-- Modal Connexion -->
 <div class="modal fade" id="connexionModal" tabindex="-1" aria-hidden="true">
@@ -585,21 +477,38 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="loginEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="loginEmail">
+                <!-- Display Django messages -->
+                {% if messages %}
+                <div class="mb-4">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            <div class="row">
+                    <div class="card col-md-12 shadow " style="border-radius: 5px;">
+                        <h2 class="text-center mt-3">Se connecter</h2>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="mb-5">
+                                <label for="username">Nom d'utilisateur:</label>
+                                <input type="text" id="username" name="username" class="form-control" style="border-radius: 5px;" placeholder="votre nom" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password">Mot de pass: </label>
+                                <input type="password" id="password" name="password" class="form-control" style="border-radius: 5px;" required>
+                            </div>
+                            
+                            <div class="row mb-1 ">
+                                <button type="submit" class="btn btn-primary m-3" style="border-radius: 5px; width: 200px;">Se connecter</button>
+                                <a href="{% url 'register' %}" class="btn btn-secondary m-3" style="border-radius: 5px; width: 200px;">S'inscrire</a>
+                            </div>
+                            
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="loginPassword" class="form-label">Mot de passe</label>
-                        <input type="password" class="form-control" id="loginPassword">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-                </form>
                 
                 <div class="text-center mt-3">
                     <p class="mb-1">Pas encore de compte? <a href="#" class="text-primary">S'inscrire</a></p>
