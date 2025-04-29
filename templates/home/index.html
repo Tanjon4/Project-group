@@ -468,57 +468,6 @@
 
 
 
-<!-- Modal Connexion -->
-<div class="modal fade" id="connexionModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Connexion</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Display Django messages -->
-                {% if messages %}
-                <div class="mb-4">
-                    {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                            {{ message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            <div class="row">
-                    <div class="card col-md-12 shadow " style="border-radius: 5px;">
-                        <h2 class="text-center mt-3">Se connecter</h2>
-                        <form action="" method="post">
-                            {% csrf_token %}
-                            <div class="mb-5">
-                                <label for="username">Nom d'utilisateur:</label>
-                                <input type="text" id="username" name="username" class="form-control" style="border-radius: 5px;" placeholder="votre nom" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="password">Mot de pass: </label>
-                                <input type="password" id="password" name="password" class="form-control" style="border-radius: 5px;" required>
-                            </div>
-                            
-                            <div class="row mb-1 ">
-                                <button type="submit" class="btn btn-primary m-3" style="border-radius: 5px; width: 200px;">Se connecter</button>
-                                <a href="{% url 'register' %}" class="btn btn-secondary m-3" style="border-radius: 5px; width: 200px;">S'inscrire</a>
-                            </div>
-                            
-                        </form>
-                    </div>
-                
-                <div class="text-center mt-3">
-                    <p class="mb-1">Pas encore de compte? <a href="#" class="text-primary">S'inscrire</a></p>
-                    <p><a href="#" class="text-primary">Mot de passe oublié?</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 {% endblock %}
 
     
