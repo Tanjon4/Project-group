@@ -43,7 +43,7 @@ def register_view(request):
         )
 
         messages.success(request, 'Inscription réussie. Connectez-vous maintenant.')
-        #return redirect('login')
+        return redirect('login')
 
     return render(request, 'auth/register.html')
 
