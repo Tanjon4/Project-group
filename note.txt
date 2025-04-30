@@ -1,1 +1,4 @@
 Izay mampiasa windows install pymysql
+user admiin apidirina ao amle /Admin: nom: Admin, mdp=0
+
+login @ site: jane doe; mdp: admin
