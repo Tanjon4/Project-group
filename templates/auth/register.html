@@ -7,30 +7,76 @@
 
 
 {% block body %}
+<br><br>
+<div class="container ">
+    <!-- Display Django messages -->
+   {% if messages %}
+   <div class="mb-4">
+       {% for message in messages %}
+           <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+               {{ message }}
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+       {% endfor %}
+   </div>
+   {% endif %}
+   <div class="row ">
+        <div class="card col-md-6 offset-3 shadow " style="border-radius: 5px;">
+            <h2 class="text-center mt-3">Register</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" name="username" class="form-control" style="border-radius: 5px;" placeholder="votre nom" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" style="border-radius: 5px;" placeholder="exemple@gmail.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password">Mot de pass: </label>
+                    <input type="password" id="password" name="password" class="form-control" style="border-radius: 5px;" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm">Confirmé - mot de pass</label>
+                    <input type="password" id="confirm" name="confirm_password" style="border-radius: 5px;" class="form-control" required>
+                </div>
+               <div class="row ">
+                <div class="mb-3 col-md-3">
+                    <label for="phone">Contact:</label>
+                    <input type="text" id="phone" name="phone" placeholder="contact" style="border-radius: 5px;" class="form-control" required>
+
+                </div>
+                <div class="mb-3 col-md-3">
+                    <label for="address">Addresse:</label>
+                    <input type="text" name="address" placeholder="Adresse" style="border-radius: 5px;" class="form-control" required>
+                </div>
+                <div class="mb-3 col-md-3">
+                    <label for="ville">Ville:</label>
+                    <input type="text" name="city" placeholder="Ville" style="border-radius: 5px;" class="form-control" required>
+                </div>
+                <div class="mb-3 col-md-3">
+                    <label for="sex">Sexe: </label>
+                    <select name="sex" class="form-select">
+                        <option value="#">choisir ...</option>
+                        <option value="M">Masculin</option>
+                        <option value="F">Féminin</option>
+                      </select>
+                </div>
+               </div>
+                
+                <div class=" row ">
+                    <button type="submit" class="btn btn-primary m-3" style="border-radius: 5px; width: 250px;">S'inscrire</button>
+                    <a href="{% url 'login' %}" class="btn btn-secondary m-3" style="border-radius: 5px; width: 250px;">Se connecter</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+<br><br>
 
 
-    <h1>Inscription</h1>
-    <form action="">
-        <div class="inputbox">
-            <ion-icon name="mail-open-outline"></ion-icon>
-            <input type="email" required>
-            <label for="">Email</label>
-        </div>
-        <div class="inputbox">
-            <ion-icon name="key-outline"></ion-icon>
-            <input type="password">
-            <label for="">Mot de passe</label>
-        </div>
-        <div class="forgot">
-            <input type="checkbox">
-            <label for="">Mot de passe oublié?</label>
-        </div>
-        <button>Inscription</button>
-        <div class="register-option">
-            <span>Déja un compte?</span>
-            <a href=""id="switch-to-login">Connectez-vous</a>
-        </div>
-    </form>
+  
 
-
-    {% endblock body %}
+{% endblock body %}
