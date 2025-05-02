@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container border w-50 shadow p-3 mb-5 rounded">
+    <h1 class="text-center">Update todo</h1>
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="mt-3">
+                    <label for="title" class="form-label" id="">Title</label>
+                    <input type="text" class="form-control " value="{{ title }}" name="new_title">
+                </div>
+                <div class="mt-3">
+                    <label for="content" class="form-label" id="content">content</label>
+                    <textarea name="new_content" id="content" class="form-control">{{ content }}</textarea>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary w-100">update totdo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock  %}
+    
